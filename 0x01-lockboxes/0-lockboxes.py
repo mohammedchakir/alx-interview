@@ -11,25 +11,15 @@ def canUnlockAll(boxes):
     Returns:
     - bool: True if all boxes can be opened, False otherwise.
     """
-    # Initialize a set to keep track of opened boxes
     opened_boxes = {0}
-
-    # Initialize a set to keep track of keys
     keys = set(boxes[0])
-
-    # Initialize a set to keep track of visited boxes
     visited = set()
-
-    # Iterate through keys and boxes
     while keys:
-        # Get a key
         key = keys.pop()
 
-        # Check if the key opens a new box
         if key not in visited:
             opened_boxes.add(key)
             visited.add(key)
             keys.update(boxes[key])
 
-    # Check if all boxes are opened
     return len(opened_boxes) == len(boxes)
