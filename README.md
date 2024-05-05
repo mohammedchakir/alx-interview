@@ -1,4 +1,7 @@
-# alx-interview
+# *alx-interview*
+
+![Face-to-Face-Interviews](https://github.com/mohammedchakir/alx-interview/assets/129831433/c10e9752-9ecb-4c76-a9e0-9f4777062929)
+
 
 ## Description:
 
@@ -6,11 +9,9 @@ This repository contains interview preparation materials and resources for ALX S
 
 ## Structure:
 
-- [0x00. Technical Interview Fundamentals
-- [0x01. Data Structures and Algorithms
-- [0x02. System Design Interviews
-- [0x03. Behavioral Interview Preparation
-- [0x04. Mock Interviews
+- [0x00. Pascal's Triangle](0x00-pascal_triangle)
+- [0x01. Lockboxes](0x01-lockboxes)
+- [0x02. Minimum Operations](0x02-minimum_operations)
 
 ## Navigation Guide:
 
