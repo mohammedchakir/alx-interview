@@ -6,12 +6,12 @@ import sys
 
 def print_statistics(total_file_size, status_code_count):
     """
-    Print statistics including total file size and number
-    of lines by status code.
+    Print statistics including total file size and number of
+    lines by status code.
     Args:
         total_file_size (int): The total file size.
-        status_code_count (dict): A dictionary containing
-        the count of each status code.
+        status_code_count (dict): A dictionary containing the
+        count of each status code.
     Returns:
         None
     """
@@ -22,13 +22,13 @@ def print_statistics(total_file_size, status_code_count):
 
 def parse_line(line, total_file_size, status_code_count):
     """
-    Parse a line from stdin and update total file size and status
-    code count accordingly.
+    Parse a line from stdin and update total file size and
+    status code count accordingly.
     Args:
         line (str): The line read from stdin.
         total_file_size (int): The current total file size.
-        status_code_count (dict): A dictionary containing the count
-        of each status code.
+        status_code_count (dict): A dictionary containing the
+        count of each status code.
     Returns:
         int: The updated total file size.
         dict: The updated status code count.
