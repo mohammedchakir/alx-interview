@@ -18,11 +18,15 @@ This repository contains interview preparation materials and resources for ALX S
 To access any interview preparation topic, follow these steps:
 
 **Clone the repository**
+```
+git clone https://github.com/your-username/alx-interview.git
+```
+```
+cd alx-interview
+```
 
-`git clone https://github.com/your-username/alx-interview.git`
 
-`cd alx-interview`
-
+-------
 Author📑:
 
 [MOHAMMED CHAKIR](https://github.com/mohammedchakir)
