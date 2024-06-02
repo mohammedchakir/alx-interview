@@ -14,6 +14,8 @@ This repository contains interview preparation materials and resources for ALX S
 - [0x02. Minimum Operations](0x02-minimum_operations)
 - [0x03. Log Parsing](0x03-log_parsing)
 - [0x04. UTF-8 Validation](0x04-utf8_validation)
+- [0x05. N Queens](0x05-nqueens)
+- [0x06. Star Wars API](0x06-starwars_api)
 
 ## Navigation Guide:
 
