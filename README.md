@@ -16,6 +16,7 @@ This repository contains interview preparation materials and resources for ALX S
 - [0x04. UTF-8 Validation](0x04-utf8_validation)
 - [0x05. N Queens](0x05-nqueens)
 - [0x06. Star Wars API](0x06-starwars_api)
+- [0x07. Rotate 2D Matrix](0x07-rotate_2d_matrix)
 
 ## Navigation Guide:
 
