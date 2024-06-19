@@ -1,18 +1,29 @@
 #!/usr/bin/python3
 """fucntion making change"""
 
+from collections import deque
 
 def makeChange(coins, total):
     """initiate the makechange"""
     if total <= 0:
         return 0
 
-    # Initialize the dp array with a large number (total + 1)
-    dp = [total + 1] * (total + 1)
-    dp[0] = 0
+    # Initialize the queue with the starting point
+    # (total) and the number of coins used (0)
+    queue = deque([(0, 0)])
+    visited = set([0])
 
-    for coin in coins:
-        for x in range(coin, total + 1):
-            dp[x] = min(dp[x], dp[x - coin] + 1)
+    while queue:
+        current_total, num_coins = queue.popleft()
 
-    return dp[total] if dp[total] != total + 1 else -1
+        for coin in coins:
+            new_total = current_total + coin
+            if new_total == total:
+                return num_coins + 1
+            if new_total > total:
+                continue
+            if new_total not in visited:
+                visited.add(new_total)
+                queue.append((new_total, num_coins + 1))
+
+    return -1
