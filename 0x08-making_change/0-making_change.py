@@ -3,6 +3,7 @@
 
 from collections import deque
 
+
 def makeChange(coins, total):
     """initiate the makechange"""
     if total <= 0:
