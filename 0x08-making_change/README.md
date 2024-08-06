@@ -1,4 +1,4 @@
-#### *0x08. Making Change*
+# *0x08. Making Change*
 
 `Algorithm`  `Python`
 
