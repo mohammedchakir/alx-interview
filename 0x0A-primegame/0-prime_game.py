@@ -1,8 +1,6 @@
 #!/usr/bin/python3
 """Prime Game."""
 
-from typing import List
-
 
 def sieve(n):
     """Returns a list of prime numbers up to n."""
