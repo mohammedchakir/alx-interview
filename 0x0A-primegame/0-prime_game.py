@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 """Prime Game."""
 
+from typing import List
+
 
 def sieve(n):
     """Returns a list of prime numbers up to n."""
@@ -45,7 +47,3 @@ def isWinner(x, nums):
         return "Ben"
     else:
         return None
-
-
-if __name__ == "__main__":
-    print("Winner: {}".format(isWinner(5, [2, 5, 1, 4, 3])))
