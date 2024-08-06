@@ -2,42 +2,42 @@
 """Prime Game."""
 
 
-def is_prime(num):
-    """Check if a number is prime."""
-    if num <= 1:
-        return False
-    for i in range(2, int(num**0.5) + 1):
-        if num % i == 0:
-            return False
-    return True
-
-
-def generate_prime_list(n):
-    """Generate a list of prime numbers up to n."""
-    primes = []
-    for i in range(2, n + 1):
-        if is_prime(i):
-            primes.append(i)
-    return primes
-
-
-def count_primes_in_range(n):
-    """Count the number of prime numbers up to n."""
-    primes = generate_prime_list(n)
-    return len(primes)
+def sieve(n):
+    """Returns a list of prime numbers up to n."""
+    is_prime = [True] * (n + 1)
+    p = 2
+    while p * p <= n:
+        if is_prime[p]:
+            for i in range(p * p, n + 1, p):
+                is_prime[i] = False
+        p += 1
+    return [p for p in range(2, n + 1) if is_prime[p]]
 
 
 def isWinner(x, nums):
-    """Determine the winner of each game."""
+    """Determine the winner of each game and return the overall winner."""
+    if x < 1 or not nums:
+        return None
+
     maria_wins = 0
     ben_wins = 0
 
     for n in nums:
-        primes_count = count_primes_in_range(n)
-        if primes_count % 2 == 1:
-            maria_wins += 1
-        else:
+        primes = sieve(n)
+        if not primes:
             ben_wins += 1
+            continue
+
+        move_count = 0
+        while primes:
+            smallest_prime = primes[0]
+            primes = [num for num in primes if num % smallest_prime != 0]
+            move_count += 1
+
+        if move_count % 2 == 0:
+            ben_wins += 1
+        else:
+            maria_wins += 1
 
     if maria_wins > ben_wins:
         return "Maria"
@@ -48,6 +48,4 @@ def isWinner(x, nums):
 
 
 if __name__ == "__main__":
-    x = 5
-    nums = [2, 5, 1, 4, 3]
-    print("Winner: {}".format(isWinner(x, nums)))
+    print("Winner: {}".format(isWinner(5, [2, 5, 1, 4, 3])))
